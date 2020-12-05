@@ -1,3 +1,6 @@
+/**
+* @author Ramanpreet Singh
+*/
 package com.crm.springdemo.entity;
 
 import javax.persistence.Column;
@@ -7,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/* Main POJO that gets stored in the table */
 @Entity
 @Table(name="customer")
 public class Customer {
@@ -25,38 +29,56 @@ public class Customer {
 	@Column(name="email")
 	private String email;
 	
+	//Default Constructor
 	public Customer() {
 		
 	}
-
+	
+	/**
+	* @return id
+	*/
 	public int getId() {
 		return id;
 	}
-
+	/**
+	* @param id to set the id
+	*/
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	/**
+	* @return firstName
+	*/
 	public String getFirstName() {
 		return firstName;
 	}
-
+	/**
+	* @param firstName to set the firstName
+	*/
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
+	/**
+	* @return lastName
+	*/
 	public String getLastName() {
 		return lastName;
 	}
-
+	/**
+	* @param lastName to set the lastName
+	*/
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
+	/**
+	* @return email
+	*/
 	public String getEmail() {
 		return email;
 	}
-
+	/**
+	* @param email to set the email
+	*/
 	public void setEmail(String email) {
 		this.email = email;
 	}
