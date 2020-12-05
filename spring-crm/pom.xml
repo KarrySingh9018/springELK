@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.luv2code</groupId>
+	<groupId>com.crm</groupId>
 	<artifactId>spring-crm</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
@@ -19,45 +19,47 @@
 
 	<dependencies>
 
-		<!-- Spring -->
+		<!-- Spring WebMvc Dependency-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<!-- Spring Transactional Dependency-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<!-- Spring ORM Dependency-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- Hibernate -->
+		<!-- Hibernate Dependency -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- MySQL -->
+		<!-- MySQL Connector Dependency -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
 		</dependency>
 
-		<!-- C3PO -->
+		<!-- C3PO Dependency-->
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>${c3po.version}</version>
 		</dependency>
 
-		<!-- Servlet+JSP+JSTL -->
+		<!-- Servlet+JSP+JSTL Dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
