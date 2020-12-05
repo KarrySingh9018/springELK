@@ -17,3 +17,10 @@ runnable environment.
 * Configure the instance security group for the RDS instance and allow port for MySQL to listen from anywhere on 3306.
 * Once the application is up and health status is OK, Copy the DNS-link and paste in the web browser to see your CRUD application.
 
+## Sreenshots
+
+![Screenshot (110)](https://user-images.githubusercontent.com/57689321/101230836-cf2f7700-3675-11eb-8e1c-5c6ceded112f.png)
+![Screenshot (107)](https://user-images.githubusercontent.com/57689321/101230837-cfc80d80-3675-11eb-92b4-c73c91b0306b.png)
+![Screenshot (108)](https://user-images.githubusercontent.com/57689321/101230838-cfc80d80-3675-11eb-9a04-8cb481709af6.png)
+![Screenshot (109)](https://user-images.githubusercontent.com/57689321/101230839-cfc80d80-3675-11eb-9835-03731ea8d428.png)
+
