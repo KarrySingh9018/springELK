@@ -1,3 +1,6 @@
+/**
+* @author Ramanpreet Singh
+*/
 package com.crm.testdb;
 
 import java.io.IOException;
@@ -24,10 +27,10 @@ public class TestDbServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// setup connection variables
-		String user = "springstudent";
-		String pass = "springstudent";
+		String user = "DB-instance-name";
+		String pass = "DB-instance-password";
 		
-		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false";
+		String jdbcUrl = "jdbc:mysql://aws-rds-instance:3306/web_customer_tracker?useSSL=false";
 		String driver = "com.mysql.jdbc.Driver";
 		
 		// get connection to database
