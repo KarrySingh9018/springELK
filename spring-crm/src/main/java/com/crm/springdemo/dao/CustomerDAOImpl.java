@@ -1,3 +1,7 @@
+/**
+*
+* @author Ramanpreet Singh
+*/
 package com.crm.springdemo.dao;
 
 import java.util.List;
@@ -15,8 +19,11 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	// need to inject the session factory
 	@Autowired
-	private SessionFactory sessionFactory;
-			
+	private SessionFactory sessionFactory; //creates a session to perform the transaction
+	
+	/**
+	* @return list of customers
+	*/
 	@Override
 	public List<Customer> getCustomers() {
 		
@@ -34,18 +41,26 @@ public class CustomerDAOImpl implements CustomerDAO {
 		// return the results		
 		return customers;
 	}
-
+	
+	/**
+	* @param theCustomer
+	* Method stores the provided customer information
+	*/
 	@Override
 	public void saveCustomer(Customer theCustomer) {
 
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		// save/upate the customer ... finally LOL
+		// save/upate the customer
 		currentSession.saveOrUpdate(theCustomer);
 		
 	}
-
+	/**
+	* @return Customer
+	* @param theId
+	* Method returns a particular customer based on the path-variable provided
+	*/
 	@Override
 	public Customer getCustomer(int theId) {
 
@@ -57,7 +72,11 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		return theCustomer;
 	}
-
+	
+	/**
+	* @param theId
+	* Method deletes the customer from the repository
+	*/
 	@Override
 	public void deleteCustomer(int theId) {
 
