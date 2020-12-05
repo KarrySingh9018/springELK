@@ -1,3 +1,7 @@
+/**
+*
+* @author Ramanpreet Singh
+*/
 package com.crm.springdemo.controller;
 
 import java.util.List;
@@ -14,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.crm.springdemo.entity.Customer;
 import com.crm.springdemo.service.CustomerService;
 
+/* Controller class that delegates the incoming request to the service layer
+and further to the repository layer. */
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -22,6 +28,10 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
+	/**
+	* @param theModel
+	* @return String which is a view of list of entries
+	*/
 	@GetMapping("/list")
 	public String listCustomers(Model theModel) {
 		
@@ -34,6 +44,10 @@ public class CustomerController {
 		return "list-customers";
 	}
 	
+	/**
+	* @param theModel
+	* @return String which is a customer form
+	*/
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 		
@@ -45,6 +59,10 @@ public class CustomerController {
 		return "customer-form";
 	}
 	
+	/**
+	* @param theCustomer
+	* @return String which is a view of list of customers
+	*/
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 		
@@ -54,6 +72,11 @@ public class CustomerController {
 		return "redirect:/customer/list";
 	}
 	
+	/**
+	* @param theId equal to the Id of the customer entry
+	* @param theModel
+	* @return String which is a customer form with filled_in fields to update
+	*/
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("customerId") int theId,
 									Model theModel) {
